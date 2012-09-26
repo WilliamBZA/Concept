@@ -1,0 +1,26 @@
+﻿@model Concept.ViewModels.OnlineEnquiryViewModel
+
+@{
+    ViewBag.Title = "Enquiry";
+}
+<article>
+    <h2>Online Enquiry</h2>
+
+    <p>
+        Just fill in your details below and one of our team members will get in contact with you as soon as we can!
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name)<text>: <br /></text>
+        @Html.EditorFor(model => model.Name)<br /><br />
+        @Html.LabelFor(model => model.PhoneNumber)<text>: <br /></text>
+        @Html.EditorFor(model => model.PhoneNumber)<br /><br />
+        @Html.LabelFor(model => model.EmailAddress)<text>: <br /></text>
+        @Html.EditorFor(model => model.EmailAddress)<br /><br />
+        @Html.LabelFor(model => model.Message)<text>: <br /></text>
+        @Html.EditorFor(model => model.Message)<br /><br />
+
+        <input type="submit" value="Send Message" />
+    }
+</article>
